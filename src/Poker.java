@@ -87,8 +87,10 @@ public class Poker {
 		System.out.println("Four of a kind = "+(fourOfAKindZahl/tries)*100 +"%");
 		System.out.println("StraightFlush = "+(straightFlushZahl/tries)*100 +"%");
 		System.out.println("RoyalFlush = "+(royalFlushZahl/tries)*100 +"%");
+		sc.close();
 	}
 	static int getColor(int zahl) {
+		assert ((zahl >= 0)&&(zahl < 55)):"Die Karte liegt nicht zwischen 1 und 55";
 		if (zahl >= 0 && zahl < 13) {
 			return 0;
 		}
